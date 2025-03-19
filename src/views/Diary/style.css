@@ -56,5 +56,123 @@
 #diary-main-wrapper .diary-list-container {
   display: flex;
   flex-direction: column;
+  gap:24px;
+}
+
+#diary-main-wrapper .diary-list-table {
+  border-radius: 10px;
+  background-color: var(--White);
+}
+
+.diary-list-table>.tr {
+  display: flex;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--Lightmode-Grey3);
+  height: 50px;
+
+  cursor: pointer;
+}
+
+.diary-list-table>.tr:first-child {
+  cursor: default;
+}
+
+.diary-list-table>.tr:last-child {
+  border: none;
+}
+
+.diary-list-table .th,
+.diary-list-table .td {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-sizing: border-box;
+  border-right: 1px solid var(--Lightmode-Grey3);
+  width: 192px;
+
+  color: var(--Lightmode-Grey);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.diary-list-table .td {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.diary-list-table .th:last-child,
+.diary-list-table .td:last-child {
+  border: none;
+}
+
+.diary-list-table .th.title,
+.diary-list-table .td.title {
+  display: block;
+
+  flex: 1;
+  justify-content: start;
+
+  box-sizing: border-box;
+  padding: 0 60px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  line-height: 50px;
+}
+
+#diary-main-wrapper .pagination-container {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination-box {
+  display: flex;
+  align-items: center;
   gap: 24px;
+}
+
+.pagination-box .pagination-button {
+  width: 40px;
+  height: 40px;
+
+  background-size: 100% 100%;
+
+  cursor: pointer;
+}
+
+.pagination-box .pagination-button.left {
+  background-image: url(src/assets/images/page-left.png);
+}
+
+.pagination-box .pagination-button.right {
+  background-image: url(src/assets/images/page-right.png);
+}
+
+.pagination-box .pagination {
+  display: flex;
+  gap: 16px;
+}
+
+.pagination-box .pagination .page {
+  color: var(--Lightmode-Grey2);
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+
+  cursor: pointer;
+}
+
+.pagination-box .pagination .page:hover {
+  font-weight: 700;
+}
+
+.pagination-box .pagination .page.active {
+  color: var(--Lightmode-Grey);
+  font-weight: 700;
+  cursor: default;
 }
