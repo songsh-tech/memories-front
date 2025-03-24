@@ -76,14 +76,15 @@ export default function ConcentrationTest() {
   // effect: 검사 시작 상태가 변경될 시 실행할 함수 //
   useEffect(() => {
     reset();
+    let interval : NodeJS.Timeout;
     if (isStarted) {
       init();
 
       setTimeout(() => {
         setFinish(true);
-      }, TOTAL_TIME);
+      }, TOTAL_TIME + STAR_TIME);
 
-      setInterval(() => {
+      interval = setInterval(() => {
         setStarVisible(true);
         clickRef.current = false;
 
@@ -93,6 +94,10 @@ export default function ConcentrationTest() {
         }, STAR_TIME);
 
       }, Math.floor(TOTAL_TIME / STAR_COUNT));
+    }
+
+    return () => {
+      clearInterval(interval);
     }
   }, [isStarted]);
 
