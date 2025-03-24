@@ -1,0 +1,23 @@
+#conc-complete-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+#conc-complete-wrapper .test-box {
+  height: 270px;
+}
+
+#conc-complete-wrapper .result-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+#conc-complete-wrapper .result-container .title {
+  color: var(--Lightmode-Grey);
+
+  font-size: 24px;
+  font-weight: 700;
+}
