@@ -67,3 +67,106 @@
   font-weight: 400;
   line-height: 20px;
 }
+
+#main-wrapper .recently-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#main-wrapper .recently-title-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+#main-wrapper .recently-title-box .title {
+  color: var(--Lightmode-Grey);
+
+  font-size: 24px;
+  font-weight: 700;
+}
+
+#main-wrapper .info-button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  border-radius: 6px;
+  padding: 8px 10px;
+
+  background-color: var(--Second);
+
+  color: var(--Primary);
+  
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+#main-wrapper .info-button .icon {
+  width: 16px;
+  height: 16px;
+
+  background-image: url(src/assets/images/info.png);
+  background-size: 100% 100%;
+}
+
+#main-wrapper .recently-chart-box {
+  border-radius: 10px;
+  height: 300px;
+
+  background-color: bisque;
+}
+
+#main-wrapper .user-update-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#main-wrapper .user-update-container .profile-image-box {
+  display: flex;
+  justify-content: center;
+}
+
+#main-wrapper .user-update-container .check-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#main-wrapper .user-update-container .check-box .label {
+  color: var(--Lightmode-Grey2);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+#main-wrapper .user-update-container .check-item-box {
+  display: flex;
+  padding-bottom: 20px;
+}
+
+#main-wrapper .user-update-container .check-item {
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 44px;
+
+  color: var(--Lightmode-Grey2);
+  font-size: 16px;
+  font-weight: 400;
+
+  cursor: pointer;
+}
+
+#main-wrapper .user-update-container .check-item.active {
+  color: var(--Lightmode-Grey);
+  font-weight: 700;
+
+  cursor: default;
+}
